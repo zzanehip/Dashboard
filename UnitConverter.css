@@ -1,0 +1,194 @@
+﻿/*
+Copyright ＿ 2005, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+*/
+
+body {
+	margin:0;
+}
+
+#behind {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	display:none;
+}
+
+.marker {
+	position: absolute;
+	width:2px;
+	height:2px;
+	border-style:solid;
+	border-color: #5a2f25;
+	border-width: 1px;
+	background-color: #491a10;
+}
+
+
+.label {
+	position: absolute;
+	font: 12px "Helvetica Neue";
+	text-shadow: 0px 1px 0px white;
+	font-weight: bold;
+	color: #444444;
+	left: 44px;
+	width:118px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+#convert-label {
+    left:16px; 
+	top:31px;
+	width:82px;
+	text-align: right;
+}
+
+#catImage {
+    position: absolute;
+    top:0px;
+    left:16px;
+}
+    
+
+.popup {
+	-webkit-appearance:none;
+	position:absolute;
+    top: 70px;
+	width:140px;
+	height:28px;
+	opacity:0.0;
+}
+
+#unitCategory-popup {
+	top:25px;
+	left:107px;
+}
+
+#convertCat-label {
+    top:31px;
+    left:113px;
+}
+
+#fromUnit-label {
+    top:77px;
+    left:32px;
+}
+
+#fromUnit-popup {
+	left:25px;
+}
+
+#toUnit-label {
+    top:77px;
+    left:194px;
+}
+
+#toUnit-popup {
+	left:186px;
+}
+
+.input {
+    position:absolute;
+    top:102px;
+    width:139px;
+    font: 18px "Helvetica Neue";
+}
+
+#convertAmount-input {
+    left:25px;
+    -apple-dashboard-region: dashboard-region(control rectangle 0 0 0 0);
+}
+
+#converted-input {
+    left:187px;
+    -apple-dashboard-region: dashboard-region(control rectangle 0 0 0 0);
+}
+
+#currency-status {
+	position: absolute;
+	font: 9px "Helvetica";
+	font-weight: bold;
+	text-shadow: 0px 1px 0px white;
+	color: #232323;
+	bottom: 18px;
+	left: 25px;
+	width: 298px;
+	text-align: center;
+}
+
+.digital-clock {
+	position: absolute;
+	font: 16px "UCLCD";
+	color: #14C9C3;
+	left: 107px;
+	top: 7px;
+}
+
+.monospaced-digital-clock {
+	position: absolute;
+	font: 16px "UCLCD";
+	color: #14C9C3;
+	top: 7px;
+	left: 25px;
+	width: 298px;
+	text-align: center;
+}
+
+#time-hour {
+	left: 139px;
+	width: 21px;
+	text-align: right;
+}
+
+#time-minutes {
+	left: 167px;
+}
+
+#time-seconds {
+	left: 193px;
+}
+
+#attribution-text {
+	position: absolute;
+	font:bold 10px "Helvetica Neue", Helvetica, sans-serif;
+	color: white;
+	left: 100px;
+	top: 51px;
+}
+
+#logo {
+	position:absolute;
+	left:102px;
+	top: 75px;
+	cursor:pointer;
+}
+
+
+#infoButton {
+    position:absolute;
+    top: 130px;
+    left: 327px;
+    width:13px;
+    height:13px;
+}
+
+#done {
+	position:absolute;
+	bottom: 22px;
+	right:18px;
+}
+
+#tosLink {
+	position:absolute;
+	left:136px; top:100px;
+	font:bold 10px "Helvetica Neue", Helvetica, sans-serif;
+	color:white;
+	text-decoration:none;
+}

@@ -1,0 +1,330 @@
+/*
+Copyright � 2005, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+*/
+
+html {
+	cursor: default;
+}
+
+body {
+	margin: 0;
+	background:transparent url(Images/trannie.png);
+}
+
+#Background-MiddleContainer { 
+	position: absolute;
+	left: 9px;
+	top: 0px;
+	width: 474px; /* modified dynamically during expand-collapse */
+	height: 163px;
+	overflow: hidden;
+}
+
+#Background-LeftEndcap {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url(Images/background_left.png) no-repeat top left;
+	width: 12px;
+	height: 162px;
+}
+
+#Background-MiddleFill {
+	position: absolute;
+	left: 3px;
+	width: 476px; /* modified dynamically during expand-collapse */
+	height: 163px;
+}
+
+#Background-RightEndcap {
+	position: absolute;
+	right: -2px; /* specifying right, not left, because it moves with size of MiddleContainer during expand-collapse */
+	top: 0px;
+	background: url(Images/background_right.png) no-repeat top right;
+	width: 12px;
+	height: 162px;
+}
+
+#AllContent-Month-Container {
+	position: absolute;
+	left: 151px;
+	top: 0px;
+	width: 100%; /* modified dynamically during expand-collapse */
+	height: 100%;
+	overflow: hidden;
+}
+
+/* #AllContent-Events {} */
+
+#AllContent-Event-Container {
+	position: absolute;
+	top: 3px;
+	left: 320px;
+	width: 131px;
+	height: 133px;
+	background: url(Images/daycard.png) no-repeat top left;
+	padding: 7px 8px 6px 8px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+#AllContent-Event-ScrollArea {
+	position: absolute;
+	top: 7px;
+	right: 20px;
+	bottom: 6px;
+	left: 8px;
+}
+
+#AllContent-Event-Scrollbar {
+	position: absolute;
+	top: 8px;
+	right: 2px;
+	bottom: 6px;
+}
+
+
+#Static-DayCard {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+}
+
+#Static-MonthCard {
+	position: absolute;
+	left: 0px;
+	top: 4px;
+}
+
+#Static-DateNumberMiddleLine {
+	position: absolute;
+	left: 3px;
+	top: 86px;
+}
+
+#Message-DayOfWeekName {
+	position: absolute;
+	top: 0px;
+	/* do not specify left and width and text-align center; see setFontSizeToFitAndCenter */
+	font: 18px "Helvetica Neue";
+  	font-weight: bold;
+	color: rgb(204,255,0);
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: 0px -1px 0px black;
+}
+
+#Message-DateOfMonthNumber {
+	position: absolute;
+	top: 17px;
+	text-align: center;
+	width: 149px;
+	font: 115px "Helvetica Neue";
+  	font-weight: bold;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.message-dateOfMonthNumber-style1to9 {
+	left: 0px;
+}
+
+.message-dateOfMonthNumber-style10to10 {
+	left: -10px;
+	letter-spacing: -14px;
+}
+
+.message-dateOfMonthNumber-style11to11 {
+	left: -8px;
+	letter-spacing: -21px;
+}
+
+.message-dateOfMonthNumber-style12to19 {
+	left: -10px;
+	letter-spacing: -14px;
+}
+
+.message-dateOfMonthNumber-style20to20 {
+	left: 1px;
+	letter-spacing: 2px;
+}
+
+.message-dateOfMonthNumber-style21to21 {
+	left: 6px;
+	letter-spacing: -4px;
+}
+
+.message-dateOfMonthNumber-style22to26 {
+	left: 1px;
+	letter-spacing: 2px;
+}
+
+.message-dateOfMonthNumber-style27to27 {
+	left: 1px;
+	letter-spacing: 0px;
+}
+
+.message-dateOfMonthNumber-style28to29 {
+	left: 0px;
+	letter-spacing: 1px;
+}
+
+.message-dateOfMonthNumber-style30to30 {
+	left: 1px;
+	letter-spacing: 2px;
+}
+
+.message-dateOfMonthNumber-style31to31 {
+	left: 5px;
+	letter-spacing: -5px;
+}
+
+#Message-MonthNameAndYearNumber {
+	position: absolute;
+	top: 9px;
+	/* do not specify left and width and text-align center; see setFontSizeToFitAndCenter */
+	font: 12px "Helvetica Neue";
+  	font-weight: bold;
+	color: rgb(204,255,0);
+	text-shadow: 0px -1px 0px black;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#Calendar-Container {
+	position: absolute;
+	left: -6px;
+	top: 20px;
+	padding-left: 9px;
+	padding-top: 6px; 
+	width: 163px;
+	font: 13px "Helvetica Neue";
+  	font-weight: bold;
+	line-height: 17px;
+}
+
+.calendar-narrowDayOfWeekTitle {
+	float: left; 
+	position: relative;
+	left: 3px;
+	width: 16px;
+	border-right: 7px solid transparent;
+	margin-top: 0px;
+  	text-align: right; 
+	color: rgb(153,153,153);
+}
+
+.calendar-dayOfMonthNumberNormal {
+	float: left; 
+	position: relative;
+	left: 3px;
+	width: 16px;
+	padding-right: 0px;
+	border-right: 7px solid transparent;
+	margin-top: 0px;
+  	text-align: right; 
+	color: white;
+}
+
+.calendar-dayOfMonthNumberDimmed {
+	float: left; 
+	position: relative;
+	left: 3px;
+	width: 16px;
+	padding-right: 0px;
+	border-right: 7px solid transparent;
+	margin-top: 0px;
+  	text-align: right; 
+	color: rgb(51,51,51);
+}
+
+.calendar-dayOfMonthNumberHighlighted {
+	float: left; 
+	position: relative;
+	left: 3px;
+	width: 16px;
+	padding-right: 0px;
+	border-right: 7px solid transparent;
+	margin-top: 0px;
+  	text-align: right; 
+	color: rgb(204,255,0);
+}
+
+#Button-Left {
+	position: absolute;
+	left: 1px;
+	top: 7px;
+	padding-left: 15px;
+	padding-right:20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#Button-Right {
+	position: absolute;
+	left: 126px;
+	top: 7px;
+	padding-left: 20px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/* iCal event display */
+.eventHeader {
+	font: 16px/16px "Helvetica Neue";
+	color: rgb(204,255,0);
+	margin-top: 3px;
+}
+
+.eventHeader:first-child {
+	margin-top: 0;
+}
+
+.eventBody, .eventBody a {
+	font: 12px "Helvetica Neue";
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.eventBody a:hover {
+	text-decoration: underline;
+}
+
+#openICalLink {
+	margin-top: 5px;
+}
+
+#openICalLink, #openICalLink a {
+	color: rgb(255, 255, 255);
+	font: 12px "Helvetica Neue";
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#openICalLink a:hover {
+	text-decoration: underline;
+}
+
+#noEvents {
+	margin-top: 45px;
+	text-align: center;
+	padding: 0 5px 0 5px;
+}
+
+#noEvents a {
+	cursor: pointer;
+}
+
+.control {
+	-apple-dashboard-region: dashboard-region(control rectangle 0 0 0 0);
+}

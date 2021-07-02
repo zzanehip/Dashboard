@@ -1,0 +1,54 @@
+<!--
+Copyright ＿ 2005, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+-->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style type="text/css" title="AppleStyle">
+	@import "WorldClock.css";
+</style>
+
+<script type='text/javascript' src='localizedStrings.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleButton.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleInfoButton.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleAnimator.js' charset='utf-8'></script>
+<script type='text/javascript' src='WorldClock.js' charset='utf-8'></script>
+</head>
+<body onload="load();">
+	<div id='front'>
+		<img class='clock-face-image' id='morningFace' src='Images/base.png' alt='' />
+		<img class='clock-face-image' id='eveningFace' src='Images/pmbase.png' alt='' />
+		<script>
+			var element = $('eveningFace');
+			if (isItEvening)
+				element.style.opacity = clockFaceAnimation.now = 1.0;
+			else
+				element.style.opacity = clockFaceAnimation.now = 0.0;
+		</script>
+		<div id='ampm'></div>
+		<canvas id='canvas' width="112" height="112"></canvas>
+		<div id ='localeDisplay'></div>
+		<div id="infoButton"></div>
+	</div>
+	<div id='behind'>
+		<img src='Images/bkclock.png' width='172' height='172' />
+		<div id='continent-label' class='label'>Continent:</div>
+		<select id='continent-popup' class='popup' onchange='continentchanged(this);'>
+		</select>
+		<select id='city-popup' class='popup' onchange='citychanged(this);'>
+			<option value='whatever'>None</option>
+		</select>
+
+		<div id='city-label' class='label'>City:</div>
+                <div id='done'></div>
+	</div>
+</body>
+</html>

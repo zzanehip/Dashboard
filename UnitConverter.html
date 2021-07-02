@@ -1,0 +1,69 @@
+﻿<!--
+Copyright ＿ 2005, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+-->
+
+
+
+<html>
+<head>
+<style type="text/css" title="AppleStyle">
+	@import "UnitConverter.css";
+</style>
+<script type='text/javascript' src='localizedStrings.js' charset='utf-8'></script>
+<script type='text/javascript' src='Conversions.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleButton.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleInfoButton.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleAnimator.js' charset='utf-8'></script>
+<script id='apple-replace-script' type='text/javascript' src='unitConverterParser.js' charset='utf-8'></script>
+<script type='text/javascript' src='UnitConverter.js' charset='utf-8'></script>
+</head>
+<body onload="load();">
+	<div id='front'>
+		<img src='Images/front.png' width='351' height='163' />
+		<img id='catImage' src='Images/Area.png' width='319' height='24'style='top:1px;' />
+		<div id='convert-label' class='label'></div>
+		<div id='convertCat-label' class='label'></div>
+		<select id='unitCategory-popup' class='popup' onchange='unitCategoryChanged(this);'>
+		</select>
+
+		<div id='fromUnit-label' class='label'></div>
+		<select id='fromUnit-popup' class='popup' onchange='fromUnitChanged(this);'>
+		</select>
+
+		<input id='convertAmount-input' class='input' type='text' value='1.00' maxLength='13'
+			onpaste='doConvertAmountLater(this, "left");'
+			onkeyup='convertAmount(this.value, "left");' />
+
+		<div id='toUnit-label' class='label'></div>
+		<select id='toUnit-popup' class='popup' onchange='toUnitChanged(this);'>
+		</select>
+
+		<input id='converted-input' class='input' type='text' value='' maxLength='13'
+			onpaste='doConvertAmountLater(this, "right");'
+			onkeyup='convertAmount(this.value, "right");' />
+
+		<div id='currency-status'></div>
+
+		<div id='time-hour'    class='digital-clock'></div>
+		<div id='time-minutes' class='digital-clock'></div>
+		<div id='time-seconds' class='digital-clock'></div>
+		<div id='time-monospaced' class='monospaced-digital-clock'></div>
+
+		<div id="infoButton"></div>
+	</div>
+	<div id='back' style='display:none;'>
+		<img src='Images/backside.png' />
+		<div id='attribution-text'></div>
+
+		<img id='logo' src='Images/Logo_YahooUnitConvertor.png' onclick='clickOnProvider();' />
+		<a id="tosLink" href="javascript:tosClick(event);"></a>
+		<div id='done'></div>
+	</div>
+</body>
+</html>

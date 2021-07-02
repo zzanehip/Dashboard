@@ -1,0 +1,129 @@
+body {
+	margin:0; 
+}
+
+#front, #frontImg {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+#myDiv {
+	width: 180px;
+	//height:162px;
+	overflow: hidden;
+	position:absolute;
+	top: 13px;
+	left: 21px;
+	outline:none;
+	//border:1px dashed blue;
+	word-wrap: break-word;
+	-apple-dashboard-region: dashboard-region(control rectangle);
+	-khtml-user-select:text;
+	//-webkit-user-modify:read-write-plaintext-only;
+	}
+
+#practiceDiv {
+	opacity:0;
+	width: 180px;
+	overflow: hidden;
+	position:absolute;
+	top: 13px;
+	left: 21px;
+	outline:none;
+	word-wrap: break-word;
+	-khtml-user-select:text;
+	-webkit-user-modify:read-write-plaintext-only;
+}
+
+#guard {
+	position:absolute;
+	top: 13px;
+	left: -5px;
+	width:1px;
+	height:1px;
+	outline: none;
+}	
+	
+#back {
+	display:none;
+	position:absolute;
+}
+
+#infoButton {
+	position:absolute;
+	top: 166px;
+	left: 201px;
+	width:13px;
+	height:13px;
+}
+/*
+#shrinkButton {
+      position:absolute;
+      top: 166px;
+      left: 188px;
+      width:13px;
+      height:13px;
+}
+*/
+#doneButton {
+	position:absolute;
+	right: 19px;
+	top: 149px;
+}
+
+.popup {
+	position:absolute;
+}
+
+#papercolor {
+	top:11px;
+}
+
+#font {
+	top:95px;
+}
+
+#font-popup {
+	position:absolute;
+	left: 19px;
+	width: 115px;
+	top:110px;
+}
+
+#size-popup {
+	position:absolute;
+	left: 145px;
+	width: 60px;
+	top: 110px;
+}
+
+#check {
+	position:absolute;
+}
+
+.label {
+	position: absolute;
+	font: 10px "Helvetica Neue";
+	font-weight: bold;
+	color:white;
+	left: 20px;
+}
+
+#dont {
+	position:absolute;
+	left: 47px;
+	top: 30px;
+	opacity:0;
+}
+
+/*
+#tearOffCorner {
+	position:absolute;
+	top: 3px;
+	right: 13px;
+}
+
+*/

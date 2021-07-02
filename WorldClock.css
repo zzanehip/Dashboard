@@ -1,0 +1,122 @@
+/*
+Copyright ＿ 2005, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+*/
+
+/* Disables ugly "text selection" of entire widget with command-a */
+* {
+	-khtml-user-select:none;
+}
+
+body {
+	margin:0;
+}
+
+.clock-face-image {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#behind {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	display:none;
+}
+
+#canvas {
+	position:absolute;
+	left:30px;
+	top:26px;
+}
+
+#ampm {
+	position: absolute;
+	top: 13px;
+	left: 0px;
+	width:172px;
+	text-align:center;
+
+	font: 10px "Helvetica Neue", sans-serif;
+	font-weight: bold;
+	color: rgba (7, 7, 7, 0.8);
+	text-shadow: rgba(255, 255, 255, 0.4) 0px 1px 1px;
+}
+
+#localeDisplay {
+	color: #C3C3C3;
+	font: 11px "Helvetica Neue", sans-serif;
+	font-weight: bold;
+  	text-align: center;
+	position: absolute;
+	text-transform: uppercase;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	top: 140px;
+	left: 31px;
+	width: 111px;
+	height: 12px;
+	z-index:1;
+}
+
+.marker {
+	position: absolute;
+	width:2px;
+	height:2px;
+	border-style:solid;
+	border-color: #5a2f25;
+	border-width: 1px;
+	background-color: #491a10;
+}
+
+#infoButton {
+	position: absolute;
+	top:140px;
+	left:142px;
+	width:13px;
+	height:13px;
+}
+
+
+#done {
+        position:absolute;
+        top: 127px;
+        right:18px;
+}
+
+.label {
+	position: absolute;
+	font: 10px "Helvetica Neue";
+	font-weight: bold;
+	color:white;
+	left: 20px;
+}
+
+#continent-label {
+	top:28px;
+}
+
+#city-label {
+	top:73px;
+}
+
+.popup {
+	position:absolute;
+	left: 19px;
+	width:132px;
+}
+
+#continent-popup {
+	top:40px;
+}
+
+ #city-popup {
+	top:85px;
+}

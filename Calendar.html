@@ -1,0 +1,64 @@
+<!--
+Copyright � 2006, Apple Computer, Inc.  All rights reserved.
+NOTE:  Use of this source code is subject to the terms of the Software
+License Agreement for Mac OS X, which accompanies the code.  Your use
+of this source code signifies your agreement to such license terms and
+conditions.  Except as expressly granted in the Software License Agreement
+for Mac OS X, no other copyright, patent, or other intellectual property
+license or right is granted, either expressly or by implication, by Apple.
+-->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style type="text/css" title="AppleStyle">
+	@import "Calendar.css";
+</style>
+<script type="text/javascript" src="Calendar.js" charset="utf-8"></script>
+<script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+<script type='text/javascript' src='AppleScrollbar.js' charset='utf-8'></script>
+<script type='text/javascript' src='AppleScrollArea.js' charset='utf-8'></script>
+
+</head>
+	<body onload="onLoaded();">
+
+	<div id="Background-LeftEndcap"></div>
+	<div id="Background-MiddleContainer">
+		<img id="Background-MiddleFill" src="Images/background_middle.png" />
+		<div id="Background-RightEndcap"></div>
+		<div id="AllContent-LeftSide" onmousedown="onRequestClickOnLeftSide(event);">
+			<img id="Static-DayCard" src="Images/daycard.png" />
+			<div id="Message-DayOfWeekName"></div>
+			<div id="Message-DateOfMonthNumber"></div>
+			<img id="Static-DateNumberMiddleLine" src="Images/divider_line.png"/>
+		</div>
+		<div id="AllContent-RightSide-Container">
+			<div id="AllContent-Month-Container">
+				<img id="Static-MonthCard" src="Images/monthcard.png" />
+				<div id="Calendar-Container">
+					<span id="DayOfWeek-0" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-1" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-2" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-3" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-4" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-5" class="calendar-narrowDayOfWeekTitle"></span>
+					<span id="DayOfWeek-6" class="calendar-narrowDayOfWeekTitle"></span>
+					<div id="Calendar-NumberGrid"></div>
+				</div>
+				<img id="Button-Left"  class="control" src="Images/bar_left.png"  onmousedown="mouseDownForButton(event, this);" onmouseover="mouseOverForButton(event, this);" onmouseout="mouseOutForButton(event, this);">
+				<img id="Button-Right" class="control" src="Images/bar_right.png" onmousedown="mouseDownForButton(event, this);" onmouseover="mouseOverForButton(event, this);" onmouseout="mouseOutForButton(event, this);">
+				<div id="Message-MonthNameAndYearNumber" onmousedown="onRequestClickedMonthNameAndYearNumber(event);"></div>
+			</div>
+
+				<div id="AllContent-Event-Container">
+					<div id="AllContent-Event-ScrollArea">
+						<div id="AllContent-Events"></div>
+					</div>
+					<div id="AllContent-Event-Scrollbar"></div>
+				</div>
+
+		</div>
+	</div>
+	</body>
+</html>

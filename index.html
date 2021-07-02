@@ -1,0 +1,62 @@
+
+<html>
+<body>
+  <style>
+body {
+  background-image: url('10-5-6k.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+background-color: #AAA;
+}
+.center {
+  text-align: center;
+    font: 20px "Lucida Grande";
+  color: white
+}
+html, body, .container {
+    height: 100%;
+}
+.container {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.spacer{
+  height: 0vh !important;
+}
+@media only screen
+  and (max-device-width: 500px)  {
+    .spacer{
+      height: 25vh !important;
+    }
+  .container {
+display: block !important;
+ }
+ object {
+   display: block !important;
+   margin-left: auto;
+ margin-right: auto;
+ }
+}
+
+</style>
+<div class="spacer"></div>
+<div class="container">
+<object type="text/html" data="WorldClock.html" width="172" height="172"></object>
+<object type="text/html" data="Calculator.html" width="172" height="248"></object>
+<!-- <object type="text/html" data="Calendar.html" width="333" height="163"></object> -->
+<object type="text/html" data="TileGame.html" width="195" height="195"></object>
+<object type="text/html" data="Stickies.html" width="230" height="215"></object>
+<object type="text/html" data="UnitConverter.html" width="351" height="163"></object>
+<!-- <object type="text/html" data="Dictionary.html" width="381" height="248"></object> -->
+</div>
+  </body>
+</html>
